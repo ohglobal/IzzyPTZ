@@ -1,0 +1,45 @@
+#include "Windows.h"
+
+/****************/
+/* Version Info */
+/****************/
+
+#define PLUGIN_NAME				"Read Text From File"
+#define PLUGIN_FILE_VERSION		1,1,0,0
+#define PLUGIN_FILE_VERSION_STR	"1.1.0"
+
+
+VS_VERSION_INFO VERSIONINFO
+
+	FILEVERSION     PLUGIN_FILE_VERSION
+	PRODUCTVERSION  PLUGIN_FILE_VERSION
+	FILEFLAGSMASK	0x3fL
+	FILEFLAGS		0
+	FILEOS			VOS__WINDOWS32
+	FILETYPE		VFT_APP
+	FILESUBTYPE		0x0L
+	
+BEGIN
+
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName", ""
+			VALUE "FileDescription", PLUGIN_NAME " plugin for Isadora"
+            VALUE "FileVersion", PLUGIN_FILE_VERSION_STR
+            VALUE "ProductVersion", PLUGIN_FILE_VERSION_STR
+            VALUE "InternalName", PLUGIN_NAME
+            VALUE "LegalCopyright", "(c) 2019 Benoît Vogel All Rights Reserved."
+            VALUE "LegalTrademarks", ""
+            VALUE "OriginalFilename", PLUGIN_NAME ".dll"
+            VALUE "ProductName", PLUGIN_NAME
+        END
+    END
+    
+	BLOCK "VarFileInfo"
+	BEGIN
+		VALUE "Translation", 0x409, 1200
+	END
+
+END
